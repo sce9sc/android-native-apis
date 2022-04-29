@@ -19,6 +19,11 @@ public class DeepLink extends ReactContextBaseJavaModule {
         return this.deepLink.getLink();
     }
 
+    @ReactMethod(isBlockingSynchronousMethod = true)
+    public String openLink(){
+        return this.deepLink.openLink();
+    }
+
     @Override
     public String getName() {
         return "DeepLink";

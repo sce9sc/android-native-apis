@@ -171,6 +171,11 @@ public class JavaWebviewBridge {
     }
 
     @JavascriptInterface
+    public String openDeepLink(){
+        return this.deepLink.openDeepLink();
+    }
+
+    @JavascriptInterface
     public String sendSMS(String number, String message) {
         return this.sms.sendSMS(number, message);
     }

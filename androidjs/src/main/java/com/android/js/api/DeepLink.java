@@ -19,4 +19,11 @@ public class DeepLink {
             return data.toString();
         else return "-1";
     }
+
+    public String openLink(String url){
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+        return "1";
+    }
 }
